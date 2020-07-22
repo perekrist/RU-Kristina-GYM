@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,7 @@
 		CABF3DFA24C839E80039C72B /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DF924C839E80039C72B /* SignUp.swift */; };
 		CABF3DFC24C83C010039C72B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DFB24C83C010039C72B /* MainView.swift */; };
 		CABF3DFF24C83C8F0039C72B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DFE24C83C8F0039C72B /* NetworkService.swift */; };
+		CABF3E0124C846890039C72B /* Navigation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3E0024C846890039C72B /* Navigation+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		CABF3DF924C839E80039C72B /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		CABF3DFB24C83C010039C72B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CABF3DFE24C83C8F0039C72B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		CABF3E0024C846890039C72B /* Navigation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Navigation+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				CABF3DE924C821720039C72B /* Info.plist */,
 				CABF3DE324C821720039C72B /* Preview Content */,
 				CABF3DFE24C83C8F0039C72B /* NetworkService.swift */,
+				CABF3E0024C846890039C72B /* Navigation+Extension.swift */,
 			);
 			path = RU_Kristina_Gym;
 			sourceTree = "<group>";
@@ -128,7 +131,6 @@
 				8E5A0A7D655D62073B61190F /* Pods-RU_Kristina_Gym.debug.xcconfig */,
 				7E90E089C879C69A67EF71D8 /* Pods-RU_Kristina_Gym.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -248,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CABF3DFF24C83C8F0039C72B /* NetworkService.swift in Sources */,
+				CABF3E0124C846890039C72B /* Navigation+Extension.swift in Sources */,
 				CABF3DF424C830D50039C72B /* Step_4.swift in Sources */,
 				CABF3DF624C832680039C72B /* Step_5.swift in Sources */,
 				CABF3DFA24C839E80039C72B /* SignUp.swift in Sources */,

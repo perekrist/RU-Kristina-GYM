@@ -10,8 +10,11 @@ import SwiftUI
 
 struct SignIn: View {
     
-    @Binding var username: String
-    @Binding var password: String
+    @State var username = ""
+    @State var password = ""
+    
+    @State var signUp = false
+    @State var main = false
     
     var body: some View {
         ZStack {
@@ -71,7 +74,7 @@ struct SignIn: View {
                 Spacer()
                 
                 Button(action: {
-                    
+                    self.main.toggle()
                 }) {
                     HStack {
                         Spacer()
@@ -86,7 +89,7 @@ struct SignIn: View {
                 .padding([.top, .horizontal])
                 
                 Button(action: {
-                    
+                    self.signUp.toggle()
                 }) {
                     HStack {
                         Spacer()
@@ -116,12 +119,13 @@ struct SignIn: View {
                 }
                 .padding(.bottom)
             }
-        }
+        }.navigate(to: SignUp(), when: $signUp)
+        .navigate(to: MainView(), when: $main)
     }
 }
 
 struct SignIn_Previews: PreviewProvider {
     static var previews: some View {
-        SignIn(username: .constant(""), password: .constant(""))
+        SignIn()
     }
 }

@@ -39,8 +39,8 @@ class NetworkService: ObservableObject {
     }
     
     func signUp(username: String, email: String, password: String) {
-        //        let weight = UserDefaults.standard.value(forKey: "weight") as! Int
-        //        let height = UserDefaults.standard.value(forKey: "height") as! Int
+//        let weight = UserDefaults.standard.value(forKey: "weight") as! Int
+//        let height = UserDefaults.standard.value(forKey: "height") as! Int
         
         let weight = "50"
         let height = "160"

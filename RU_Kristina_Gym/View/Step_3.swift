@@ -11,9 +11,9 @@ import SwiftUI
 struct Step_3: View {
     
     @State var width = UIScreen.main.bounds.width
-//    @State var gender = UserDefaults.standard.value(forKey: "gender") as! String == "male" ? "body_m" : "body_f"
+    @State var gender = UserDefaults.standard.value(forKey: "gender") as? String ?? "male"
     
-     @State var gender = "body_m"
+    @State var nextPage = false
     
     var body: some View {
         ZStack {
@@ -29,13 +29,13 @@ struct Step_3: View {
                     .padding(.vertical, 50)
                 
                 ZStack {
-                    Image(gender)
+                    Image(self.gender == "male" ? "body_m" : "body_f")
                         .offset(x: width / 2 - 20)
                     
                     HStack {
                         VStack {
                             Button(action: {
-                                
+                                self.nextPage.toggle()
                             }) {
                                 HStack {
                                     Spacer()
@@ -50,7 +50,7 @@ struct Step_3: View {
                                 .padding()
                             
                             Button(action: {
-                                
+                                self.nextPage.toggle()
                             }) {
                                 HStack {
                                     Spacer()
@@ -65,7 +65,7 @@ struct Step_3: View {
                                 .padding()
                             
                             Button(action: {
-                                
+                                self.nextPage.toggle()
                             }) {
                                 HStack {
                                     Spacer()
@@ -99,7 +99,7 @@ struct Step_3: View {
                 }
                 
             }
-        }
+        }.navigate(to: Step_4(), when: $nextPage)
     }
 }
 

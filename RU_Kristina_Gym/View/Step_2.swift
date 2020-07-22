@@ -9,6 +9,10 @@
 import SwiftUI
 
 struct Step_2: View {
+    
+    @State var nextPage = false
+    @State var gender = UserDefaults.standard.value(forKey: "gender") as? String ?? ""
+    
     var body: some View {
         ZStack {
             Color(#colorLiteral(red: 0.4350972176, green: 0.6101457477, blue: 0.8216096163, alpha: 1)).edgesIgnoringSafeArea(.all)
@@ -30,14 +34,15 @@ struct Step_2: View {
                     
                     VStack {
                         Button(action: {
-                            
+                            UserDefaults.standard.set("female", forKey: "gender")
+                            self.gender = UserDefaults.standard.value(forKey: "gender") as! String
                         }) {
                             Image("female")
                                 .resizable()
                                 .frame(width: 64, height: 64)
                                 .padding()
                         }
-                        .background(Color.white)
+                        .background(self.gender == "female" ? Color.yellow : Color.white)
                         .clipShape(Circle())
                         .padding()
                         
@@ -51,21 +56,21 @@ struct Step_2: View {
                     
                     VStack {
                         Button(action: {
-                            
+                            UserDefaults.standard.set("male", forKey: "gender")
+                            self.gender = UserDefaults.standard.value(forKey: "gender") as! String
                         }) {
                             Image("male")
                                 .resizable()
                                 .frame(width: 64, height: 64)
                                 .padding()
                         }
-                        .background(Color.white)
+                        .background(self.gender == "male" ? Color.yellow : Color.white)
                         .clipShape(Circle())
                         .padding()
                         
                         Text("Male")
                             .font(.system(size: 24))
                             .foregroundColor(.white)
-                        
                     }
                     
                     Spacer()
@@ -76,11 +81,9 @@ struct Step_2: View {
                 Spacer()
                 
                 Button(action: {
-                    
+                    self.nextPage.toggle()
                 }) {
                     HStack {
-                        
-                        
                         Spacer()
                         Text("Next")
                             .font(.system(size: 24))
@@ -93,7 +96,7 @@ struct Step_2: View {
                 .padding()
                 
             }
-        }
+        }.navigate(to: Step_3(), when: $nextPage)
     }
 }
 

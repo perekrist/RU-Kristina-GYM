@@ -10,8 +10,10 @@ import SwiftUI
 
 struct Step_5: View {
     
-    @Binding var heigth: String
-    @Binding var weight: String
+    @State var heigth = ""
+    @State var weight = ""
+    
+    @State var nextPage = false
     
     var body: some View {
         ZStack {
@@ -46,7 +48,9 @@ struct Step_5: View {
                 Spacer()
                 
                 Button(action: {
-                    
+                    self.nextPage.toggle()
+                    UserDefaults.standard.set(self.heigth, forKey: "heigth")
+                    UserDefaults.standard.set(self.weight, forKey: "weight")
                 }) {
                     HStack {
                         Spacer()
@@ -60,12 +64,12 @@ struct Step_5: View {
                 .cornerRadius(40)
                 .padding()
             }
-        }
+        }.navigate(to: SignIn(), when: $nextPage)
     }
 }
 
 struct Step_5_Previews: PreviewProvider {
     static var previews: some View {
-        Step_5(heigth: .constant(""), weight: .constant(""))
+        Step_5()
     }
 }

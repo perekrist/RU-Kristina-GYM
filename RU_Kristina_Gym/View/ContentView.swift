@@ -11,6 +11,8 @@ import SwiftUI
 struct ContentView: View {
     
     @ObservedObject var viewModel = NetworkService()
+    let isFirstTime = UserDefaults.standard.value(forKey: "isFirstTime") as? Bool ?? true
+    @State var nextPage = false
     
     var body: some View {
         ZStack {
@@ -27,7 +29,7 @@ struct ContentView: View {
                 
                 VStack {
                     Button(action: {
-                        
+                        self.nextPage.toggle()
                     }) {
                         ZStack {
                             HStack {
@@ -53,7 +55,7 @@ struct ContentView: View {
                     .padding()
                     
                     Button(action: {
-                        
+                        self.nextPage.toggle()
                     }) {
                         ZStack {
                             HStack {
@@ -79,7 +81,7 @@ struct ContentView: View {
                     .padding()
                     
                     Button(action: {
-                        
+                         self.nextPage.toggle()
                     }) {
                         ZStack {
                             HStack {
@@ -105,8 +107,9 @@ struct ContentView: View {
                     .padding()
                 }
             }
-        }
+        }.navigate(to: Step_2(), when: $nextPage)
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
