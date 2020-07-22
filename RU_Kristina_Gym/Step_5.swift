@@ -60,8 +60,6 @@ struct Step_5: View {
                 .cornerRadius(40)
                 .padding()
             }
-            
-            
         }
     }
 }

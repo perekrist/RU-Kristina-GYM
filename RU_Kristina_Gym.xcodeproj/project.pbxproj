@@ -17,6 +17,7 @@
 		CABF3DF224C82CD10039C72B /* Step_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DF124C82CD10039C72B /* Step_3.swift */; };
 		CABF3DF424C830D50039C72B /* Step_4.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DF324C830D50039C72B /* Step_4.swift */; };
 		CABF3DF624C832680039C72B /* Step_5.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DF524C832680039C72B /* Step_5.swift */; };
+		CABF3DF824C8355E0039C72B /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DF724C8355E0039C72B /* SignIn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CABF3DF124C82CD10039C72B /* Step_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step_3.swift; sourceTree = "<group>"; };
 		CABF3DF324C830D50039C72B /* Step_4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step_4.swift; sourceTree = "<group>"; };
 		CABF3DF524C832680039C72B /* Step_5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step_5.swift; sourceTree = "<group>"; };
+		CABF3DF724C8355E0039C72B /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				CABF3DF124C82CD10039C72B /* Step_3.swift */,
 				CABF3DF324C830D50039C72B /* Step_4.swift */,
 				CABF3DF524C832680039C72B /* Step_5.swift */,
+				CABF3DF724C8355E0039C72B /* SignIn.swift */,
 			);
 			path = RU_Kristina_Gym;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				CABF3DDC24C821670039C72B /* AppDelegate.swift in Sources */,
 				CABF3DDE24C821670039C72B /* SceneDelegate.swift in Sources */,
 				CABF3DE024C821670039C72B /* ContentView.swift in Sources */,
+				CABF3DF824C8355E0039C72B /* SignIn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
