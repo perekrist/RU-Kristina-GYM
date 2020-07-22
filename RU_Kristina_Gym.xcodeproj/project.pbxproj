@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4AB64FE037267B1C6CA6ED2 /* Pods_RU_Kristina_Gym.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29543974181BB9C0B0F1272F /* Pods_RU_Kristina_Gym.framework */; };
 		CABF3DDC24C821670039C72B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DDB24C821670039C72B /* AppDelegate.swift */; };
 		CABF3DDE24C821670039C72B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DDD24C821670039C72B /* SceneDelegate.swift */; };
 		CABF3DE024C821670039C72B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DDF24C821670039C72B /* ContentView.swift */; };
@@ -20,9 +21,13 @@
 		CABF3DF824C8355E0039C72B /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DF724C8355E0039C72B /* SignIn.swift */; };
 		CABF3DFA24C839E80039C72B /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DF924C839E80039C72B /* SignUp.swift */; };
 		CABF3DFC24C83C010039C72B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DFB24C83C010039C72B /* MainView.swift */; };
+		CABF3DFF24C83C8F0039C72B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DFE24C83C8F0039C72B /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29543974181BB9C0B0F1272F /* Pods_RU_Kristina_Gym.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RU_Kristina_Gym.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E90E089C879C69A67EF71D8 /* Pods-RU_Kristina_Gym.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RU_Kristina_Gym.release.xcconfig"; path = "Target Support Files/Pods-RU_Kristina_Gym/Pods-RU_Kristina_Gym.release.xcconfig"; sourceTree = "<group>"; };
+		8E5A0A7D655D62073B61190F /* Pods-RU_Kristina_Gym.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RU_Kristina_Gym.debug.xcconfig"; path = "Target Support Files/Pods-RU_Kristina_Gym/Pods-RU_Kristina_Gym.debug.xcconfig"; sourceTree = "<group>"; };
 		CABF3DD824C821670039C72B /* RU_Kristina_Gym.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RU_Kristina_Gym.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABF3DDB24C821670039C72B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CABF3DDD24C821670039C72B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +43,7 @@
 		CABF3DF724C8355E0039C72B /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		CABF3DF924C839E80039C72B /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		CABF3DFB24C83C010039C72B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CABF3DFE24C83C8F0039C72B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +51,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4AB64FE037267B1C6CA6ED2 /* Pods_RU_Kristina_Gym.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A1B60A9CA6853E24519C31D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29543974181BB9C0B0F1272F /* Pods_RU_Kristina_Gym.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CABF3DCF24C821670039C72B = {
 			isa = PBXGroup;
 			children = (
 				CABF3DDA24C821670039C72B /* RU_Kristina_Gym */,
 				CABF3DD924C821670039C72B /* Products */,
+				D69BC76D0992100626FA3CA6 /* Pods */,
+				7A1B60A9CA6853E24519C31D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,20 +87,14 @@
 		CABF3DDA24C821670039C72B /* RU_Kristina_Gym */ = {
 			isa = PBXGroup;
 			children = (
+				CABF3DFD24C83C5B0039C72B /* View */,
 				CABF3DDB24C821670039C72B /* AppDelegate.swift */,
 				CABF3DDD24C821670039C72B /* SceneDelegate.swift */,
 				CABF3DE124C821720039C72B /* Assets.xcassets */,
 				CABF3DE624C821720039C72B /* LaunchScreen.storyboard */,
 				CABF3DE924C821720039C72B /* Info.plist */,
 				CABF3DE324C821720039C72B /* Preview Content */,
-				CABF3DDF24C821670039C72B /* ContentView.swift */,
-				CABF3DEF24C82A6F0039C72B /* Step_2.swift */,
-				CABF3DF124C82CD10039C72B /* Step_3.swift */,
-				CABF3DF324C830D50039C72B /* Step_4.swift */,
-				CABF3DF524C832680039C72B /* Step_5.swift */,
-				CABF3DF724C8355E0039C72B /* SignIn.swift */,
-				CABF3DF924C839E80039C72B /* SignUp.swift */,
-				CABF3DFB24C83C010039C72B /* MainView.swift */,
+				CABF3DFE24C83C8F0039C72B /* NetworkService.swift */,
 			);
 			path = RU_Kristina_Gym;
 			sourceTree = "<group>";
@@ -96,6 +107,31 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		CABF3DFD24C83C5B0039C72B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CABF3DDF24C821670039C72B /* ContentView.swift */,
+				CABF3DEF24C82A6F0039C72B /* Step_2.swift */,
+				CABF3DF124C82CD10039C72B /* Step_3.swift */,
+				CABF3DF324C830D50039C72B /* Step_4.swift */,
+				CABF3DF524C832680039C72B /* Step_5.swift */,
+				CABF3DF724C8355E0039C72B /* SignIn.swift */,
+				CABF3DF924C839E80039C72B /* SignUp.swift */,
+				CABF3DFB24C83C010039C72B /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D69BC76D0992100626FA3CA6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E5A0A7D655D62073B61190F /* Pods-RU_Kristina_Gym.debug.xcconfig */,
+				7E90E089C879C69A67EF71D8 /* Pods-RU_Kristina_Gym.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +139,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CABF3DEC24C821720039C72B /* Build configuration list for PBXNativeTarget "RU_Kristina_Gym" */;
 			buildPhases = (
+				DBC094709F5D2628F8EF1105 /* [CP] Check Pods Manifest.lock */,
 				CABF3DD424C821670039C72B /* Sources */,
 				CABF3DD524C821670039C72B /* Frameworks */,
 				CABF3DD624C821670039C72B /* Resources */,
+				90D3FFA3266B376725B779C6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -162,11 +200,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		90D3FFA3266B376725B779C6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RU_Kristina_Gym/Pods-RU_Kristina_Gym-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RU_Kristina_Gym/Pods-RU_Kristina_Gym-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RU_Kristina_Gym/Pods-RU_Kristina_Gym-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBC094709F5D2628F8EF1105 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RU_Kristina_Gym-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CABF3DD424C821670039C72B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CABF3DFF24C83C8F0039C72B /* NetworkService.swift in Sources */,
 				CABF3DF424C830D50039C72B /* Step_4.swift in Sources */,
 				CABF3DF624C832680039C72B /* Step_5.swift in Sources */,
 				CABF3DFA24C839E80039C72B /* SignUp.swift in Sources */,
@@ -310,6 +391,7 @@
 		};
 		CABF3DED24C821720039C72B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E5A0A7D655D62073B61190F /* Pods-RU_Kristina_Gym.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -330,6 +412,7 @@
 		};
 		CABF3DEE24C821720039C72B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E90E089C879C69A67EF71D8 /* Pods-RU_Kristina_Gym.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
