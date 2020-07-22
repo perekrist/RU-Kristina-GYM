@@ -19,10 +19,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="elips" translatesAutoresizingMaskIntoConstraints="NO" id="7tW-T5-urh">
-                                <rect key="frame" x="136.5" y="147" width="141" height="141"/>
+                                <rect key="frame" x="151" y="159" width="112" height="112"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="141" id="POz-05-8y5"/>
-                                    <constraint firstAttribute="height" constant="141" id="aAT-Sc-h7b"/>
+                                    <constraint firstAttribute="width" constant="112" id="POz-05-8y5"/>
+                                    <constraint firstAttribute="height" constant="112" id="aAT-Sc-h7b"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Le2-8I-cV8">
@@ -40,7 +40,7 @@
                             <constraint firstItem="113-Db-uMD" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="ehi-eG-k3n"/>
                             <constraint firstItem="113-Db-uMD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gHr-tJ-dFY"/>
                             <constraint firstItem="Le2-8I-cV8" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="hk3-uU-8uo"/>
-                            <constraint firstItem="7tW-T5-urh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="103" id="jBr-wL-FXV"/>
+                            <constraint firstItem="7tW-T5-urh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="115" id="jBr-wL-FXV"/>
                             <constraint firstAttribute="bottom" secondItem="113-Db-uMD" secondAttribute="bottom" id="nU1-lW-zYb"/>
                             <constraint firstItem="7tW-T5-urh" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rlD-kS-pOH"/>
                         </constraints>

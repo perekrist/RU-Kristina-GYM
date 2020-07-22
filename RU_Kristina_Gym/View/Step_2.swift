@@ -13,6 +13,8 @@ struct Step_2: View {
     @State var nextPage = false
     @State var gender = UserDefaults.standard.value(forKey: "gender") as? String ?? ""
     
+    @State var taped = false
+    
     var body: some View {
         ZStack {
             Color(#colorLiteral(red: 0.4350972176, green: 0.6101457477, blue: 0.8216096163, alpha: 1)).edgesIgnoringSafeArea(.all)
@@ -81,6 +83,7 @@ struct Step_2: View {
                 Spacer()
                 
                 Button(action: {
+                    self.taped.toggle()
                     self.nextPage.toggle()
                 }) {
                     HStack {
@@ -91,7 +94,7 @@ struct Step_2: View {
                         Spacer()
                     }
                 }
-                .background(Color.white)
+                .background(self.taped ? Color.yellow : Color.white)
                 .cornerRadius(30)
                 .padding()
                 

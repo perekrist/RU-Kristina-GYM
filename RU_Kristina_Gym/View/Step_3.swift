@@ -15,6 +15,8 @@ struct Step_3: View {
     
     @State var nextPage = false
     
+    @State var type: Int?
+    
     var body: some View {
         ZStack {
             Color(#colorLiteral(red: 0.4350972176, green: 0.6101457477, blue: 0.8216096163, alpha: 1)).edgesIgnoringSafeArea(.all)
@@ -35,6 +37,7 @@ struct Step_3: View {
                     HStack {
                         VStack {
                             Button(action: {
+                                self.type = 0
                                 self.nextPage.toggle()
                             }) {
                                 HStack {
@@ -45,11 +48,12 @@ struct Step_3: View {
                                     Spacer()
                                 }
                             }.frame(width: 172, height: 46)
-                                .background(Color.white)
+                                .background(self.type == 0 ? Color.yellow : Color.white)
                                 .cornerRadius(30)
                                 .padding()
                             
                             Button(action: {
+                                self.type = 1
                                 self.nextPage.toggle()
                             }) {
                                 HStack {
@@ -60,11 +64,12 @@ struct Step_3: View {
                                     Spacer()
                                 }
                             }.frame(width: 172, height: 46)
-                                .background(Color.white)
+                                .background(self.type == 1 ? Color.yellow : Color.white)
                                 .cornerRadius(30)
                                 .padding()
                             
                             Button(action: {
+                                self.type = 2
                                 self.nextPage.toggle()
                             }) {
                                 HStack {
@@ -75,11 +80,12 @@ struct Step_3: View {
                                     Spacer()
                                 }
                             }.frame(width: 172, height: 46)
-                                .background(Color.white)
+                                .background(self.type == 2 ? Color.yellow : Color.white)
                                 .cornerRadius(30)
                                 .padding()
                             
                             Button(action: {
+                                self.type = 3
                                 self.nextPage.toggle()
                             }) {
                                 HStack {
@@ -90,7 +96,7 @@ struct Step_3: View {
                                     Spacer()
                                 }
                             }.frame(width: 172, height: 46)
-                                .background(Color.white)
+                                .background(self.type == 3 ? Color.yellow : Color.white)
                                 .cornerRadius(30)
                                 .padding()
                         }

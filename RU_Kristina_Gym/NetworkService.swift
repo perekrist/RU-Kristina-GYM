@@ -15,9 +15,9 @@ class NetworkService: ObservableObject {
     var baseURL = "http://gym.areas.su/"
     
     init() {
-//        signUp(username: "name", email: "email@mail.com", password: "password")
-//        signIn(username: "name", password: "password")
-//        signout(username: "name")
+        //        signUp(username: "name", email: "email@mail.com", password: "password")
+        //        signIn(username: "name", password: "password")
+        //        signout(username: "name")
     }
     
     func signIn(username: String, password: String, completion: @escaping () -> Void) {
@@ -50,24 +50,28 @@ class NetworkService: ObservableObject {
     func signUp(username: String, email: String, password: String, completion: @escaping () -> Void) {
         let weight = UserDefaults.standard.value(forKey: "weight") as? String ?? "0"
         let height = UserDefaults.standard.value(forKey: "height") as? String ?? "0"
-                
+        
         let parameters: Parameters = ["username": username,
                                       "email": email,
                                       "password": password,
                                       "weight": weight,
                                       "height": height]
         
+        print(parameters)
+        
         AF.request(baseURL + "signup",
                    method: .post,
                    parameters: parameters,
                    encoding: URLEncoding.default).responseData { (data) in
                     
-                    let json = try! JSON(data: data.data!)
-                    print(json)
-                    if json != "" {
-                        UserDefaults.standard.set(true, forKey: "isLogIned")
-                        UserDefaults.standard.set(username, forKey: "username")
-                        completion()
+                    if data.data != nil {
+                        let json = try! JSON(data: data.data!)
+                        print(json)
+                        if json != "" {
+                            UserDefaults.standard.set(true, forKey: "isLogIned")
+                            UserDefaults.standard.set(username, forKey: "username")
+                            completion()
+                        }
                     }
         }
     }

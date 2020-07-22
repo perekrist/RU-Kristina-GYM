@@ -19,7 +19,7 @@ struct SignUp: View {
     
     @State var signIn = false
     @State var main = false
-    
+        
     var body: some View {
         ZStack {
             Color(#colorLiteral(red: 0.4350972176, green: 0.6101457477, blue: 0.8216096163, alpha: 1)).edgesIgnoringSafeArea(.all)
@@ -84,7 +84,7 @@ struct SignUp: View {
                         Divider()
                             .frame(height: 30)
                         
-                        TextField("Password", text: $password)
+                        SecureField("Password", text: $password)
                         
                     }.padding(10)
                         .background(Color.white)
@@ -102,7 +102,7 @@ struct SignUp: View {
                         Divider()
                             .frame(height: 30)
                         
-                        TextField("Re-Password", text: $rePassword)
+                        SecureField("Re-Password", text: $rePassword)
                         
                     }.padding(10)
                         .background(Color.white)
@@ -145,7 +145,7 @@ struct SignUp: View {
                 .padding(.bottom)
             }
         }.navigate(to: SignIn(), when: $signIn)
-            .navigate(to: MainView(), when: $main)
+            .navigate(to: SignIn(), when: $main)
     }
     
     func checkData() {

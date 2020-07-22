@@ -15,6 +15,8 @@ struct ContentView: View {
     @State var isLogIned = UserDefaults.standard.value(forKey: "isLogIned") as? Bool ?? false
     @State var nextPage = false
     
+    @State var type: Int?
+    
     var body: some View {
         ZStack {
             Color(#colorLiteral(red: 0.4350972176, green: 0.6101457477, blue: 0.8216096163, alpha: 1)).edgesIgnoringSafeArea(.all)
@@ -30,6 +32,7 @@ struct ContentView: View {
                 
                 VStack {
                     Button(action: {
+                        self.type = 0
                         self.nextPage.toggle()
                     }) {
                         ZStack {
@@ -51,11 +54,12 @@ struct ContentView: View {
                             }
                         }
                     }
-                    .background(Color.white)
+                    .background(self.type == 0 ? Color.yellow : Color.white)
                     .cornerRadius(30)
                     .padding()
                     
                     Button(action: {
+                        self.type = 1
                         self.nextPage.toggle()
                     }) {
                         ZStack {
@@ -77,11 +81,12 @@ struct ContentView: View {
                             }
                         }
                     }
-                    .background(Color.white)
+                    .background(self.type == 1 ? Color.yellow : Color.white)
                     .cornerRadius(30)
                     .padding()
                     
                     Button(action: {
+                        self.type = 2
                          self.nextPage.toggle()
                     }) {
                         ZStack {
@@ -103,7 +108,7 @@ struct ContentView: View {
                             }
                         }
                     }
-                    .background(Color.white)
+                    .background(self.type == 2 ? Color.yellow : Color.white)
                     .cornerRadius(30)
                     .padding()
                 }

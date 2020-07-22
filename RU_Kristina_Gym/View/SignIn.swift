@@ -17,7 +17,7 @@ struct SignIn: View {
     
     @State var signUp = false
     @State var main = false
-    
+        
     var body: some View {
         ZStack {
             Color(#colorLiteral(red: 0.4350972176, green: 0.6101457477, blue: 0.8216096163, alpha: 1)).edgesIgnoringSafeArea(.all)
@@ -64,7 +64,8 @@ struct SignIn: View {
                         Divider()
                             .frame(height: 30)
                         
-                        TextField("Password", text: $password)
+                        SecureField("Password", text: $password)
+                        
                         
                     }.padding(10)
                         .background(Color.white)
