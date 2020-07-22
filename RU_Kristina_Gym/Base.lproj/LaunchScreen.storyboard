@@ -18,9 +18,15 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchscreen" translatesAutoresizingMaskIntoConstraints="NO" id="113-Db-uMD">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="elips" translatesAutoresizingMaskIntoConstraints="NO" id="7tW-T5-urh">
+                                <rect key="frame" x="136.5" y="147" width="141" height="141"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="141" id="POz-05-8y5"/>
+                                    <constraint firstAttribute="height" constant="141" id="aAT-Sc-h7b"/>
+                                </constraints>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Le2-8I-cV8">
-                                <rect key="frame" x="120" y="147" width="180" height="141"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="136.5" y="147" width="141" height="141"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="141" id="2vF-UO-PZL"/>
                                     <constraint firstAttribute="width" constant="141" id="TaC-Xi-hKr"/>
@@ -31,11 +37,12 @@
                         <constraints>
                             <constraint firstItem="Le2-8I-cV8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="103" id="9eh-0w-X1R"/>
                             <constraint firstItem="113-Db-uMD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Lc8-0Z-8Af"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Le2-8I-cV8" secondAttribute="trailing" constant="114" id="cDe-9t-MO9"/>
                             <constraint firstItem="113-Db-uMD" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="ehi-eG-k3n"/>
                             <constraint firstItem="113-Db-uMD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gHr-tJ-dFY"/>
-                            <constraint firstItem="Le2-8I-cV8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="ic2-eE-JGu"/>
+                            <constraint firstItem="Le2-8I-cV8" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="hk3-uU-8uo"/>
+                            <constraint firstItem="7tW-T5-urh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="103" id="jBr-wL-FXV"/>
                             <constraint firstAttribute="bottom" secondItem="113-Db-uMD" secondAttribute="bottom" id="nU1-lW-zYb"/>
+                            <constraint firstItem="7tW-T5-urh" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rlD-kS-pOH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -46,6 +53,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="elips" width="112" height="112"/>
         <image name="launchscreen" width="563" height="1218"/>
         <image name="logo" width="212" height="212"/>
     </resources>
