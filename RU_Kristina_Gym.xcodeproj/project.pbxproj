@@ -13,6 +13,7 @@
 		CABF3DE224C821720039C72B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CABF3DE124C821720039C72B /* Assets.xcassets */; };
 		CABF3DE524C821720039C72B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CABF3DE424C821720039C72B /* Preview Assets.xcassets */; };
 		CABF3DE824C821720039C72B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CABF3DE624C821720039C72B /* LaunchScreen.storyboard */; };
+		CABF3DF024C82A6F0039C72B /* Step_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DEF24C82A6F0039C72B /* Step_2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CABF3DE424C821720039C72B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CABF3DE724C821720039C72B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CABF3DE924C821720039C72B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CABF3DEF24C82A6F0039C72B /* Step_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step_2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +58,14 @@
 		CABF3DDA24C821670039C72B /* RU_Kristina_Gym */ = {
 			isa = PBXGroup;
 			children = (
-				CABF3DDF24C821670039C72B /* ContentView.swift */,
 				CABF3DDB24C821670039C72B /* AppDelegate.swift */,
 				CABF3DDD24C821670039C72B /* SceneDelegate.swift */,
 				CABF3DE124C821720039C72B /* Assets.xcassets */,
 				CABF3DE624C821720039C72B /* LaunchScreen.storyboard */,
 				CABF3DE924C821720039C72B /* Info.plist */,
 				CABF3DE324C821720039C72B /* Preview Content */,
+				CABF3DEF24C82A6F0039C72B /* Step_2.swift */,
+				CABF3DDF24C821670039C72B /* ContentView.swift */,
 			);
 			path = RU_Kristina_Gym;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CABF3DF024C82A6F0039C72B /* Step_2.swift in Sources */,
 				CABF3DDC24C821670039C72B /* AppDelegate.swift in Sources */,
 				CABF3DDE24C821670039C72B /* SceneDelegate.swift in Sources */,
 				CABF3DE024C821670039C72B /* ContentView.swift in Sources */,
