@@ -11,7 +11,8 @@ import SwiftUI
 struct ContentView: View {
     
     @ObservedObject var viewModel = NetworkService()
-    let isFirstTime = UserDefaults.standard.value(forKey: "isFirstTime") as? Bool ?? true
+    @State var isNotFirstTime = UserDefaults.standard.value(forKey: "isNotFirstTime") as? Bool ?? false
+    @State var isLogIned = UserDefaults.standard.value(forKey: "isLogIned") as? Bool ?? false
     @State var nextPage = false
     
     var body: some View {
@@ -106,8 +107,12 @@ struct ContentView: View {
                     .cornerRadius(30)
                     .padding()
                 }
+            }.onAppear {
+                UserDefaults.standard.removeObject(forKey: "gender")
             }
         }.navigate(to: Step_2(), when: $nextPage)
+        .navigate(to: SignIn(), when: $isNotFirstTime)
+        .navigate(to: MainView(), when: $isLogIned)
     }
     
 }

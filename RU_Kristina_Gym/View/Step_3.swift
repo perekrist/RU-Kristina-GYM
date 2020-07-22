@@ -80,7 +80,7 @@ struct Step_3: View {
                                 .padding()
                             
                             Button(action: {
-                                
+                                self.nextPage.toggle()
                             }) {
                                 HStack {
                                     Spacer()

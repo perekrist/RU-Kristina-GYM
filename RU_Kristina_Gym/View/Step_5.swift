@@ -51,6 +51,7 @@ struct Step_5: View {
                     self.nextPage.toggle()
                     UserDefaults.standard.set(self.heigth, forKey: "heigth")
                     UserDefaults.standard.set(self.weight, forKey: "weight")
+                    UserDefaults.standard.set(true, forKey: "isNotFirstTime")
                 }) {
                     HStack {
                         Spacer()

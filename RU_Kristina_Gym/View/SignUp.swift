@@ -10,6 +10,8 @@ import SwiftUI
 
 struct SignUp: View {
     
+    @ObservedObject var viewModel = NetworkService()
+    
     @State var username = ""
     @State var email = ""
     @State var password = ""
@@ -112,7 +114,7 @@ struct SignUp: View {
                 Spacer()
                 
                 Button(action: {
-                    self.main.toggle()
+                    self.checkData()
                 }) {
                     HStack {
                         Spacer()
@@ -144,6 +146,18 @@ struct SignUp: View {
             }
         }.navigate(to: SignIn(), when: $signIn)
             .navigate(to: MainView(), when: $main)
+    }
+    
+    func checkData() {
+        if self.username != "" && self.email != "" && self.password != "" && self.rePassword != "" {
+            if self.password == self.rePassword {
+                if self.email.contains("@") {
+                    self.viewModel.signUp(username: self.username, email: self.email, password: self.password, completion: {
+                        self.main.toggle()
+                    })
+                }
+            }
+        }
     }
 }
 
