@@ -1,5 +1,5 @@
 //
-//  SignIn.swift
+//  SignUp.swift
 //  RU_Kristina_Gym
 //
 //  Created by Кристина Перегудова on 22.07.2020.
@@ -8,10 +8,12 @@
 
 import SwiftUI
 
-struct SignIn: View {
+struct SignUp: View {
     
     @Binding var username: String
+    @Binding var email: String
     @Binding var password: String
+    @Binding var rePassword: String
     
     var body: some View {
         ZStack {
@@ -46,7 +48,25 @@ struct SignIn: View {
                         .background(Color.white)
                         .cornerRadius(30)
                         .padding(.horizontal)
-                        .padding(.vertical, 15)
+                    
+                    HStack {
+                        Image(systemName: "envelope.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 15)
+                            .foregroundColor(Color(#colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.662745098, alpha: 1)))
+                            .padding(10)
+                        
+                        Divider()
+                            .frame(height: 30)
+                        
+                        TextField("Email", text: $email)
+                        
+                    }.padding(10)
+                        .background(Color.white)
+                        .cornerRadius(30)
+                        .padding(.horizontal)
+                        .padding(.vertical, 10)
                     
                     HStack {
                         Image("lock")
@@ -65,7 +85,25 @@ struct SignIn: View {
                         .background(Color.white)
                         .cornerRadius(30)
                         .padding(.horizontal)
-                        .padding(.vertical, 15)
+                    
+                    HStack {
+                        Image("lock")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 15)
+                            .foregroundColor(Color(#colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.662745098, alpha: 1)))
+                            .padding(10)
+                        
+                        Divider()
+                            .frame(height: 30)
+                        
+                        TextField("Re-Password", text: $rePassword)
+                        
+                    }.padding(10)
+                        .background(Color.white)
+                        .cornerRadius(30)
+                        .padding(.horizontal)
+                        .padding(.vertical, 10)
                 }
                 
                 Spacer()
@@ -75,7 +113,7 @@ struct SignIn: View {
                 }) {
                     HStack {
                         Spacer()
-                        Text("Sign In")
+                        Text("Sign Up")
                             .font(.system(size: 24))
                             .padding(.vertical, 14)
                         Spacer()
@@ -85,21 +123,6 @@ struct SignIn: View {
                 .cornerRadius(40)
                 .padding([.top, .horizontal])
                 
-                Button(action: {
-                    
-                }) {
-                    HStack {
-                        Spacer()
-                        Text("Sign Up")
-                            .underline()
-                            .font(.system(size: 24))
-                            .padding(.vertical, 24)
-                            .foregroundColor(.white)
-                        Spacer()
-                    }
-                }
-                .padding(.bottom)
-                
                 Spacer()
                 
                 Button(action: {
@@ -107,7 +130,7 @@ struct SignIn: View {
                 }) {
                     HStack {
                         Spacer()
-                        Text("Skip")
+                        Text("Back")
                             .underline()
                             .font(.system(size: 16))
                             .foregroundColor(.white)
@@ -120,8 +143,8 @@ struct SignIn: View {
     }
 }
 
-struct SignIn_Previews: PreviewProvider {
+struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        SignIn(username: .constant(""), password: .constant(""))
+        SignUp(username: .constant(""), email: .constant(""), password: .constant(""), rePassword: .constant(""))
     }
 }
