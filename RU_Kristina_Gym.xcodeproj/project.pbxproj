@@ -19,6 +19,7 @@
 		CABF3DF624C832680039C72B /* Step_5.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DF524C832680039C72B /* Step_5.swift */; };
 		CABF3DF824C8355E0039C72B /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DF724C8355E0039C72B /* SignIn.swift */; };
 		CABF3DFA24C839E80039C72B /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DF924C839E80039C72B /* SignUp.swift */; };
+		CABF3DFC24C83C010039C72B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DFB24C83C010039C72B /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		CABF3DF524C832680039C72B /* Step_5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step_5.swift; sourceTree = "<group>"; };
 		CABF3DF724C8355E0039C72B /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		CABF3DF924C839E80039C72B /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		CABF3DFB24C83C010039C72B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				CABF3DF524C832680039C72B /* Step_5.swift */,
 				CABF3DF724C8355E0039C72B /* SignIn.swift */,
 				CABF3DF924C839E80039C72B /* SignUp.swift */,
+				CABF3DFB24C83C010039C72B /* MainView.swift */,
 			);
 			path = RU_Kristina_Gym;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				CABF3DF424C830D50039C72B /* Step_4.swift in Sources */,
 				CABF3DF624C832680039C72B /* Step_5.swift in Sources */,
 				CABF3DFA24C839E80039C72B /* SignUp.swift in Sources */,
+				CABF3DFC24C83C010039C72B /* MainView.swift in Sources */,
 				CABF3DF024C82A6F0039C72B /* Step_2.swift in Sources */,
 				CABF3DF224C82CD10039C72B /* Step_3.swift in Sources */,
 				CABF3DDC24C821670039C72B /* AppDelegate.swift in Sources */,
