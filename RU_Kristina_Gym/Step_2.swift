@@ -13,6 +13,9 @@ struct Step_2: View {
         ZStack {
             Color(#colorLiteral(red: 0.4350972176, green: 0.6101457477, blue: 0.8216096163, alpha: 1)).edgesIgnoringSafeArea(.all)
             VStack {
+                
+                Spacer()
+                
                 Text("Step 2/5")
                     .font(.system(size: 50))
                     .foregroundColor(.white)
@@ -70,6 +73,7 @@ struct Step_2: View {
                 .padding(.top, 40)
                 .padding(.bottom, 80)
                 
+                Spacer()
                 
                 Button(action: {
                     

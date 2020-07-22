@@ -16,6 +16,7 @@
 		CABF3DF024C82A6F0039C72B /* Step_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DEF24C82A6F0039C72B /* Step_2.swift */; };
 		CABF3DF224C82CD10039C72B /* Step_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DF124C82CD10039C72B /* Step_3.swift */; };
 		CABF3DF424C830D50039C72B /* Step_4.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DF324C830D50039C72B /* Step_4.swift */; };
+		CABF3DF624C832680039C72B /* Step_5.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DF524C832680039C72B /* Step_5.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		CABF3DEF24C82A6F0039C72B /* Step_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step_2.swift; sourceTree = "<group>"; };
 		CABF3DF124C82CD10039C72B /* Step_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step_3.swift; sourceTree = "<group>"; };
 		CABF3DF324C830D50039C72B /* Step_4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step_4.swift; sourceTree = "<group>"; };
+		CABF3DF524C832680039C72B /* Step_5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step_5.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,10 +70,11 @@
 				CABF3DE624C821720039C72B /* LaunchScreen.storyboard */,
 				CABF3DE924C821720039C72B /* Info.plist */,
 				CABF3DE324C821720039C72B /* Preview Content */,
-				CABF3DEF24C82A6F0039C72B /* Step_2.swift */,
 				CABF3DDF24C821670039C72B /* ContentView.swift */,
+				CABF3DEF24C82A6F0039C72B /* Step_2.swift */,
 				CABF3DF124C82CD10039C72B /* Step_3.swift */,
 				CABF3DF324C830D50039C72B /* Step_4.swift */,
+				CABF3DF524C832680039C72B /* Step_5.swift */,
 			);
 			path = RU_Kristina_Gym;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CABF3DF424C830D50039C72B /* Step_4.swift in Sources */,
+				CABF3DF624C832680039C72B /* Step_5.swift in Sources */,
 				CABF3DF024C82A6F0039C72B /* Step_2.swift in Sources */,
 				CABF3DF224C82CD10039C72B /* Step_3.swift in Sources */,
 				CABF3DDC24C821670039C72B /* AppDelegate.swift in Sources */,
