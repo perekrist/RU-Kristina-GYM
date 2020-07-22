@@ -56,9 +56,9 @@
 		CABF3DDA24C821670039C72B /* RU_Kristina_Gym */ = {
 			isa = PBXGroup;
 			children = (
+				CABF3DDF24C821670039C72B /* ContentView.swift */,
 				CABF3DDB24C821670039C72B /* AppDelegate.swift */,
 				CABF3DDD24C821670039C72B /* SceneDelegate.swift */,
-				CABF3DDF24C821670039C72B /* ContentView.swift */,
 				CABF3DE124C821720039C72B /* Assets.xcassets */,
 				CABF3DE624C821720039C72B /* LaunchScreen.storyboard */,
 				CABF3DE924C821720039C72B /* Info.plist */,
