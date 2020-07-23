@@ -66,7 +66,7 @@ struct Profile: View {
                                 .font(.system(size: 14))
                                 .foregroundColor(.white)
                         }.padding()
-                    }
+                    }.offset(y: 20)
                     
                 }
                 

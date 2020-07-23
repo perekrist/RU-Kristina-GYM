@@ -9,33 +9,35 @@
 import SwiftUI
 
 struct Plan: View {
+    
+    @State var drag = false
+    
     var body: some View {
         ZStack {
             VStack {
-                LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.3866932392, green: 0.6149073243, blue: 0.8426337838, alpha: 1)), Color(#colorLiteral(red: 0.7710116506, green: 0.8286624551, blue: 0.8925099969, alpha: 1))]), startPoint: .leading, endPoint: .trailing).edgesIgnoringSafeArea(.top)
-                    .frame(height: 212)
-                
-                Spacer()
-            }
-            
-            VStack {
-                
-                Text("Home Gym")
-                    .font(.system(size: 24))
-                    .foregroundColor(.white)
-                    .padding()
-                    .padding(.top, 20)
-                
-                ScrollView {
+                ZStack {
+                    LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.3866932392, green: 0.6149073243, blue: 0.8426337838, alpha: 1)), Color(#colorLiteral(red: 0.7710116506, green: 0.8286624551, blue: 0.8925099969, alpha: 1))]), startPoint: .leading, endPoint: .trailing).edgesIgnoringSafeArea(.top)
+                        .frame(height: self.drag ? 212 - 30 : 212)
+                    
+                    HStack {
+                        Text("Home Gym")
+                            .font(.system(size: 24))
+                            .foregroundColor(.white)
+                            .padding()
+                        
+                        if self.drag {
+                            Spacer()
+                        }
+                    }
                     
                     HStack {
                         VStack {
                             Text("0")
                                 .font(.system(size: 15))
-                                .foregroundColor(Color(#colorLiteral(red: 0.3866932392, green: 0.6149073243, blue: 0.8426337838, alpha: 1)))
+                                .foregroundColor(self.drag ? Color.white : Color(#colorLiteral(red: 0.3866932392, green: 0.6149073243, blue: 0.8426337838, alpha: 1)))
                             Text("Training")
                                 .font(.system(size: 16))
-                                .foregroundColor(Color(#colorLiteral(red: 0.3866932392, green: 0.6149073243, blue: 0.8426337838, alpha: 1)))
+                                .foregroundColor(self.drag ? Color.white : Color(#colorLiteral(red: 0.3866932392, green: 0.6149073243, blue: 0.8426337838, alpha: 1)))
                         }.padding()
                         
                         Spacer()
@@ -43,10 +45,10 @@ struct Plan: View {
                         VStack {
                             Text("0")
                                 .font(.system(size: 15))
-                                .foregroundColor(Color(#colorLiteral(red: 0.3866932392, green: 0.6149073243, blue: 0.8426337838, alpha: 1)))
+                                .foregroundColor(self.drag ? Color.white : Color(#colorLiteral(red: 0.3866932392, green: 0.6149073243, blue: 0.8426337838, alpha: 1)))
                             Text("Kcal")
                                 .font(.system(size: 16))
-                                .foregroundColor(Color(#colorLiteral(red: 0.3866932392, green: 0.6149073243, blue: 0.8426337838, alpha: 1)))
+                                .foregroundColor(self.drag ? Color.white : Color(#colorLiteral(red: 0.3866932392, green: 0.6149073243, blue: 0.8426337838, alpha: 1)))
                         }.padding()
                         
                         Spacer()
@@ -54,13 +56,25 @@ struct Plan: View {
                         VStack {
                             Text("0")
                                 .font(.system(size: 15))
-                                .foregroundColor(Color(#colorLiteral(red: 0.3866932392, green: 0.6149073243, blue: 0.8426337838, alpha: 1)))
+                                .foregroundColor(self.drag ? Color.white : Color(#colorLiteral(red: 0.3866932392, green: 0.6149073243, blue: 0.8426337838, alpha: 1)))
                             Text("Minutes")
                                 .font(.system(size: 16))
-                                .foregroundColor(Color(#colorLiteral(red: 0.3866932392, green: 0.6149073243, blue: 0.8426337838, alpha: 1)))
+                                .foregroundColor(self.drag ? Color.white : Color(#colorLiteral(red: 0.3866932392, green: 0.6149073243, blue: 0.8426337838, alpha: 1)))
                         }.padding()
-                    }.padding(.top, 45)
+                    }.background(self.drag ? Color.clear : Color.white)
+                    .frame(width: UIScreen.main.bounds.width - 50)
+                    .padding(.top, 145)
+                    .cornerRadius(30)
+                        .offset(y: self.drag ? -30 : 0)
                     
+                }
+                Spacer()
+            }
+            
+            VStack {
+                Spacer(minLength: 212)
+                
+                ScrollView {
                     VStack {
                         ZStack {
                             Image("hands")
@@ -73,7 +87,9 @@ struct Plan: View {
                                     Text("Hands")
                                         .font(.system(size: 18))
                                         .foregroundColor(Color(#colorLiteral(red: 0.3866932392, green: 0.6149073243, blue: 0.8426337838, alpha: 1)))
+                                        .padding(.leading, 30)
                                         .padding()
+                                        
                                     Spacer()
                                 }
                             }.padding()
@@ -90,6 +106,7 @@ struct Plan: View {
                                     Text("Spine")
                                         .font(.system(size: 18))
                                         .foregroundColor(Color(#colorLiteral(red: 0.3866932392, green: 0.6149073243, blue: 0.8426337838, alpha: 1)))
+                                        .padding(.leading, 30)
                                         .padding()
                                     Spacer()
                                 }
@@ -107,6 +124,7 @@ struct Plan: View {
                                     Text("Torso")
                                         .font(.system(size: 18))
                                         .foregroundColor(Color(#colorLiteral(red: 0.3866932392, green: 0.6149073243, blue: 0.8426337838, alpha: 1)))
+                                        .padding(.leading, 30)
                                         .padding()
                                     Spacer()
                                 }
@@ -124,6 +142,7 @@ struct Plan: View {
                                     Text("Legs")
                                         .font(.system(size: 18))
                                         .foregroundColor(Color(#colorLiteral(red: 0.3866932392, green: 0.6149073243, blue: 0.8426337838, alpha: 1)))
+                                        .padding(.leading, 30)
                                         .padding()
                                     Spacer()
                                 }
@@ -131,9 +150,12 @@ struct Plan: View {
                         }
                     }
                 }
-                .frame(width: UIScreen.main.bounds.width - 50, height: 800)
+                .onTapGesture {
+                    withAnimation {
+                        self.drag.toggle()
+                    }
+                }
                 .background(Color.white)
-                .cornerRadius(60)
             }
         }
     }
