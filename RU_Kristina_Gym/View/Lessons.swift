@@ -11,6 +11,7 @@ import SwiftUI
 struct Lessons: View {
     
     @State var selected = 0
+    @ObservedObject var viewModel = NetworkService()
     
     var body: some View {
         VStack {
@@ -92,36 +93,48 @@ struct Lessons: View {
             
             if self.selected == 0 {
                 ScrollView {
-                    ForEach(0 ..< 5) { _ in
+                    ForEach(0 ..< self.viewModel.handsLesson.count) { i in
                         Image("hands")
                             .padding()
+                        .onTapGesture {
+                                print(self.viewModel.handsLesson[i].url)
+                        }
                     }
                 }
             }
             
             if self.selected == 1 {
                 ScrollView {
-                    ForEach(0 ..< 5) { _ in
+                    ForEach(0 ..< self.viewModel.spineLesson.count) { i in
                         Image("spine")
                             .padding()
+                        .onTapGesture {
+                                print(self.viewModel.spineLesson[i].url)
+                        }
                     }
                 }
             }
             
             if self.selected == 2 {
                 ScrollView {
-                    ForEach(0 ..< 5) { _ in
+                    ForEach(0 ..< self.viewModel.torsoLesson.count) { i in
                         Image("torso")
                             .padding()
+                        .onTapGesture {
+                                print(self.viewModel.torsoLesson[i].url)
+                        }
                     }
                 }
             }
             
             if self.selected == 3 {
                 ScrollView {
-                    ForEach(0 ..< 5) { _ in
+                    ForEach(0 ..< self.viewModel.legsLesson.count) { i in
                         Image("legs")
                             .padding()
+                            .onTapGesture {
+                                print(self.viewModel.legsLesson[i].url)
+                        }
                     }
                 }
             }

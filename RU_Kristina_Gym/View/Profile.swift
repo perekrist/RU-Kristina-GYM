@@ -20,7 +20,7 @@ struct Profile: View {
     @State var username = "Ivanov Ivan"
     
     @State var toggle = true
-    @State var showAlert = true
+    @State var showAlert = false
     
     
     var body: some View {

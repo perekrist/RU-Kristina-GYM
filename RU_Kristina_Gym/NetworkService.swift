@@ -15,14 +15,12 @@ class NetworkService: ObservableObject {
     var baseURL = "http://gym.areas.su/"
     var lessons: [Lesson] = []
     
+    var handsLesson: [Lesson] = []
+    var spineLesson: [Lesson] = []
+    var torsoLesson: [Lesson] = []
+    var legsLesson: [Lesson] = []
     init() {
-        profile(completion: {
-
-        })
-        
-        lessons(completion: {
-            
-        })
+        getLessons()
     }
     
     func signIn(username: String, password: String, completion: @escaping () -> Void) {
@@ -130,26 +128,45 @@ class NetworkService: ObservableObject {
         
     }
     
-    func lessons(completion: @escaping () -> Void) {
-                
+    func getLessons() {
+        
         AF.request(baseURL + "lessons",
                    method: .get,
                    encoding: URLEncoding.default).responseData { (data) in
                     
                     if data.data != nil {
                         let json = try! JSON(data: data.data!)
+                        print(json)
                         for i in json {
                             self.lessons.append(Lesson(category: i.1["category"].stringValue, url: i.1["url"].stringValue, id: i.1["id"].intValue))
                         }
-                        if json != "" {
-                            completion()
+                        self.handsLesson = self.lessons.filter { (i) -> Bool in
+                            i.category == "hands"
                         }
+                        
+                        self.spineLesson = self.lessons.filter { (i) -> Bool in
+                            i.category == "spine"
+                        }
+                        
+                        self.torsoLesson = self.lessons.filter { (i) -> Bool in
+                            i.category == "torso"
+                        }
+                        
+                        self.legsLesson = self.lessons.filter { (i) -> Bool in
+                            i.category == "legs"
+                        }
+                        
+                        print(self.lessons.count)
+                        print(self.handsLesson.count)
+                        print(self.spineLesson.count)
+                        print(self.torsoLesson.count)
+                        print(self.legsLesson.count)
                     }
         }
     }
     
     func editeprofile(completion: @escaping () -> Void) {
-                
+        
         let weight = UserDefaults.standard.value(forKey: "weight") as? String ?? "0"
         let height = UserDefaults.standard.value(forKey: "height") as? String ?? "0"
         let token = UserDefaults.standard.value(forKey: "token") as? String ?? "0"

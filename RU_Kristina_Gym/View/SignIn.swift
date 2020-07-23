@@ -123,7 +123,7 @@ struct SignIn: View {
                 .padding(.bottom)
             }
         }.navigate(to: SignUp(), when: $signUp)
-        .navigate(to: Profile(), when: $main)
+        .navigate(to: MainView(), when: $main)
     }
     
     func checkData() {
