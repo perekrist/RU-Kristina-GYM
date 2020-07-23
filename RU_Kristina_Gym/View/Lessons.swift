@@ -96,8 +96,8 @@ struct Lessons: View {
                     ForEach(0 ..< self.viewModel.handsLesson.count) { i in
                         Image("hands")
                             .padding()
-                        .onTapGesture {
-                                print(self.viewModel.handsLesson[i].url)
+                            .onTapGesture {
+                                self.viewModel.openWebPage(url: self.viewModel.handsLesson[i].url)
                         }
                     }
                 }
@@ -108,8 +108,8 @@ struct Lessons: View {
                     ForEach(0 ..< self.viewModel.spineLesson.count) { i in
                         Image("spine")
                             .padding()
-                        .onTapGesture {
-                                print(self.viewModel.spineLesson[i].url)
+                            .onTapGesture {
+                                self.viewModel.openWebPage(url: self.viewModel.spineLesson[i].url)
                         }
                     }
                 }
@@ -120,8 +120,8 @@ struct Lessons: View {
                     ForEach(0 ..< self.viewModel.torsoLesson.count) { i in
                         Image("torso")
                             .padding()
-                        .onTapGesture {
-                                print(self.viewModel.torsoLesson[i].url)
+                            .onTapGesture {
+                                self.viewModel.openWebPage(url: self.viewModel.torsoLesson[i].url)
                         }
                     }
                 }
@@ -133,7 +133,7 @@ struct Lessons: View {
                         Image("legs")
                             .padding()
                             .onTapGesture {
-                                print(self.viewModel.legsLesson[i].url)
+                                self.viewModel.openWebPage(url: self.viewModel.legsLesson[i].url)
                         }
                     }
                 }
