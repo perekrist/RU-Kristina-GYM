@@ -136,7 +136,6 @@ class NetworkService: ObservableObject {
                     
                     if data.data != nil {
                         let json = try! JSON(data: data.data!)
-                        print(json)
                         for i in json {
                             self.lessons.append(Lesson(category: i.1["category"].stringValue, url: i.1["url"].stringValue, id: i.1["id"].intValue))
                         }
@@ -155,12 +154,6 @@ class NetworkService: ObservableObject {
                         self.legsLesson = self.lessons.filter { (i) -> Bool in
                             i.category == "legs"
                         }
-                        
-                        print(self.lessons.count)
-                        print(self.handsLesson.count)
-                        print(self.spineLesson.count)
-                        print(self.torsoLesson.count)
-                        print(self.legsLesson.count)
                     }
         }
     }

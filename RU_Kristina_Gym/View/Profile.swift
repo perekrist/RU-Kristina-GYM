@@ -22,6 +22,8 @@ struct Profile: View {
     @State var toggle = true
     @State var showAlert = false
     
+    @State var showGenderAlert = false
+    
     
     var body: some View {
         ZStack {
@@ -114,7 +116,7 @@ struct Profile: View {
                     Divider()
                     HStack {
                         Button(action: {
-                            
+                            self.showGenderAlert.toggle()
                         }) {
                             Text("Start dialog")
                                 .foregroundColor(Color(#colorLiteral(red: 0.3905416727, green: 0.6189041138, blue: 0.8423945904, alpha: 1)))
@@ -241,6 +243,63 @@ struct Profile: View {
                     .padding()
                     .background(Color(#colorLiteral(red: 0.9567824006, green: 0.9569160342, blue: 0.9567400813, alpha: 1)))
                     .cornerRadius(20)
+            }
+            
+            if showGenderAlert {
+                HStack {
+                    Spacer()
+                    
+                    VStack {
+                        Button(action: {
+                            UserDefaults.standard.set("female", forKey: "gender")
+                            self.gender = UserDefaults.standard.value(forKey: "gender") as! String
+                            self.showGenderAlert.toggle()
+                        }) {
+                            Image("female")
+                                .resizable()
+                                .frame(width: 64, height: 64)
+                                .padding()
+                        }
+                        .background(self.gender == "female" ? Color.yellow : Color.white)
+                        .clipShape(Circle())
+                        .padding()
+                        
+                        Text("Female")
+                            .font(.system(size: 24))
+                            .foregroundColor(.white)
+                        
+                    }.padding()
+                    
+                    Spacer()
+                    
+                    VStack {
+                        Button(action: {
+                            UserDefaults.standard.set("male", forKey: "gender")
+                            self.gender = UserDefaults.standard.value(forKey: "gender") as! String
+                            self.showGenderAlert.toggle()
+                        }) {
+                            Image("male")
+                                .resizable()
+                                .frame(width: 64, height: 64)
+                                .padding()
+                        }
+                        .background(self.gender == "male" ? Color.yellow : Color.white)
+                        .clipShape(Circle())
+                        .padding()
+                        
+                        Text("Male")
+                            .font(.system(size: 24))
+                            .foregroundColor(.white)
+                    }.padding()
+                    
+                    Spacer()
+                }.frame(width: 280, height: 220)
+                    .background(Color(#colorLiteral(red: 0.3905416727, green: 0.6189041138, blue: 0.8423945904, alpha: 1)))
+                    .cornerRadius(20)
+                    .padding(.top, 40)
+                    .padding(.bottom, 80)
+                
+                
             }
         }.navigate(to: SignIn(), when: $sigIn)
     }
