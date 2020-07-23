@@ -11,6 +11,7 @@ import SwiftUI
 struct MainView: View {
     
     @State var selected = 0
+    @State var sigIn = false
     
     var body: some View {
         ZStack {
@@ -24,7 +25,7 @@ struct MainView: View {
             }
             
             if selected == 3 {
-                Profile()
+                Profile(sigIn: $sigIn)
             }
             
             VStack {
@@ -35,7 +36,7 @@ struct MainView: View {
             }
             
             
-        }
+        }.navigate(to: SignIn(), when: $sigIn)
     }
 }
 

@@ -11,9 +11,7 @@ import SwiftUI
 struct Profile: View {
     
     @ObservedObject var viewModel = NetworkService()
-    
-    @State var sigIn = false
-    
+        
     @State var gender = UserDefaults.standard.value(forKey: "gender") as? String ?? "--"
     @State var weight = UserDefaults.standard.value(forKey: "weight") as? String ?? "--"
     @State var height = UserDefaults.standard.value(forKey: "height") as? String ?? "--"
@@ -23,6 +21,8 @@ struct Profile: View {
     @State var showAlert = false
     
     @State var showGenderAlert = false
+    
+    @Binding var sigIn: Bool
         
     var body: some View {
         ZStack {
@@ -159,9 +159,12 @@ struct Profile: View {
                         Spacer()
                     }
                     
-                }.cornerRadius(15)
+                }
                     .border(Color(#colorLiteral(red: 0.3905416727, green: 0.6189041138, blue: 0.8423945904, alpha: 1)), width: 1)
+                    .cornerRadius(15)
                     .padding()
+                
+                Spacer()
                 
                 Text("Design by Sergey Klimovich")
                     .foregroundColor(Color(#colorLiteral(red: 0.3905416727, green: 0.6189041138, blue: 0.8423945904, alpha: 1)))
@@ -301,12 +304,12 @@ struct Profile: View {
                 
                 
             }
-        }.navigate(to: SignIn(), when: $sigIn)
+        }
     }
 }
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        Profile()
+        Profile(sigIn: .constant(true))
     }
 }
