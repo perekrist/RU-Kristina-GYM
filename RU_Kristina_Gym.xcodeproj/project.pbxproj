@@ -27,6 +27,7 @@
 		CABF3E0724C97AA80039C72B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3E0624C97AA80039C72B /* MainView.swift */; };
 		CABF3E0924C981C90039C72B /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3E0824C981C90039C72B /* Plan.swift */; };
 		CABF3E0B24C982A20039C72B /* Lessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3E0A24C982A10039C72B /* Lessons.swift */; };
+		CABF3E0D24C996440039C72B /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3E0C24C996440039C72B /* Lesson.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		CABF3E0624C97AA80039C72B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CABF3E0824C981C90039C72B /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
 		CABF3E0A24C982A10039C72B /* Lessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lessons.swift; sourceTree = "<group>"; };
+		CABF3E0C24C996440039C72B /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				CABF3DE924C821720039C72B /* Info.plist */,
 				CABF3DE324C821720039C72B /* Preview Content */,
 				CABF3DFE24C83C8F0039C72B /* NetworkService.swift */,
+				CABF3E0C24C996440039C72B /* Lesson.swift */,
 				CABF3E0024C846890039C72B /* Navigation+Extension.swift */,
 			);
 			path = RU_Kristina_Gym;
@@ -274,6 +277,7 @@
 				CABF3DE024C821670039C72B /* ContentView.swift in Sources */,
 				CABF3DF824C8355E0039C72B /* SignIn.swift in Sources */,
 				CABF3E0724C97AA80039C72B /* MainView.swift in Sources */,
+				CABF3E0D24C996440039C72B /* Lesson.swift in Sources */,
 				CABF3E0524C977690039C72B /* TabBar.swift in Sources */,
 				CABF3E0924C981C90039C72B /* Plan.swift in Sources */,
 				CABF3E0B24C982A20039C72B /* Lessons.swift in Sources */,

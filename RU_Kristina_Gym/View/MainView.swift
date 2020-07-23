@@ -23,6 +23,10 @@ struct MainView: View {
                 Lessons()
             }
             
+            if selected == 3 {
+                Plan()
+            }
+            
             VStack {
                 Spacer()
                 

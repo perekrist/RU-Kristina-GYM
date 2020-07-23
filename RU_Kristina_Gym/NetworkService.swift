@@ -13,11 +13,16 @@ import SwiftyJSON
 class NetworkService: ObservableObject {
     
     var baseURL = "http://gym.areas.su/"
+    var lessons: [Lesson] = []
     
     init() {
-        //        signUp(username: "name", email: "email@mail.com", password: "password")
-        //        signIn(username: "name", password: "password")
-        //        signout(username: "name")
+        profile(completion: {
+
+        })
+        
+        lessons(completion: {
+            
+        })
     }
     
     func signIn(username: String, password: String, completion: @escaping () -> Void) {
@@ -97,4 +102,81 @@ class NetworkService: ObservableObject {
                     }
         }
     }
+    
+    func profile(completion: @escaping () -> Void) {
+        
+        let token = UserDefaults.standard.value(forKey: "token") as? String ?? "token"
+        
+        let parameters: Parameters = ["token": token]
+        
+        AF.request(baseURL + "profile",
+                   method: .post,
+                   parameters: parameters,
+                   encoding: URLEncoding.default).responseData { (data) in
+                    
+                    if data.data != nil {
+                        let json = try! JSON(data: data.data!)
+                        print(json)
+                        for i in json {
+                            UserDefaults.standard.set(i.1["username"].stringValue, forKey: "username")
+                            UserDefaults.standard.set(i.1["height"].stringValue, forKey: "height")
+                            UserDefaults.standard.set(i.1["weight"].stringValue, forKey: "weight")
+                        }
+                        if json != "" {
+                            completion()
+                        }
+                    }
+        }
+        
+    }
+    
+    func lessons(completion: @escaping () -> Void) {
+                
+        AF.request(baseURL + "lessons",
+                   method: .get,
+                   encoding: URLEncoding.default).responseData { (data) in
+                    
+                    if data.data != nil {
+                        let json = try! JSON(data: data.data!)
+                        for i in json {
+                            self.lessons.append(Lesson(category: i.1["category"].stringValue, url: i.1["url"].stringValue, id: i.1["id"].intValue))
+                        }
+                        if json != "" {
+                            completion()
+                        }
+                    }
+        }
+    }
+    
+    func editeprofile(completion: @escaping () -> Void) {
+                
+        let weight = UserDefaults.standard.value(forKey: "weight") as? String ?? "0"
+        let height = UserDefaults.standard.value(forKey: "height") as? String ?? "0"
+        let token = UserDefaults.standard.value(forKey: "token") as? String ?? "0"
+        
+        let parameters: Parameters = ["token": token,
+                                      "weight": weight,
+                                      "height": height]
+        
+        AF.request(baseURL + "editeprofile",
+                   method: .put,
+                   encoding: URLEncoding.default).responseData { (data) in
+                    
+                    if data.data != nil {
+                        let json = try! JSON(data: data.data!)
+                        
+                        let notice = json["notice"]
+                        let text = notice["text"].stringValue
+                        let answer = notice["answer"].stringValue
+                        
+                        print(notice)
+                        
+                        if text != "" {
+                            completion()
+                        }
+                    }
+        }
+    }
+    
+    
 }
