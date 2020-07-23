@@ -24,7 +24,7 @@ struct MainView: View {
             }
             
             if selected == 3 {
-                Plan()
+                Profile()
             }
             
             VStack {

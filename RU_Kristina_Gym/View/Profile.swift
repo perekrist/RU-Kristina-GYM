@@ -14,10 +14,10 @@ struct Profile: View {
     
     @State var sigIn = false
     
-    @State var gender = "male"
-    @State var weight = "80"
-    @State var height = "175"
-    @State var username = "Ivanov Ivan"
+    @State var gender = UserDefaults.standard.value(forKey: "gender") as? String ?? "--"
+    @State var weight = UserDefaults.standard.value(forKey: "weight") as? String ?? "--"
+    @State var height = UserDefaults.standard.value(forKey: "height") as? String ?? "--"
+    @State var username = UserDefaults.standard.value(forKey: "username") as? String ?? "--"
     
     @State var toggle = true
     @State var showAlert = false
@@ -99,7 +99,7 @@ struct Profile: View {
                     Divider()
                     HStack {
                         Button(action: {
-                            
+                            self.showAlert.toggle()
                         }) {
                             Text("Biometric")
                                 .foregroundColor(Color(#colorLiteral(red: 0.3905416727, green: 0.6189041138, blue: 0.8423945904, alpha: 1)))
@@ -143,7 +143,7 @@ struct Profile: View {
                 }
                 
                 Button(action: {
-                    self.viewModel.signout(username: UserDefaults.standard.value(forKey: "username") as? String ?? "", completion: {
+                    self.viewModel.signout(username: self.username, completion: {
                         self.sigIn.toggle()
                     })
                 }) {
@@ -160,7 +160,6 @@ struct Profile: View {
                 }.cornerRadius(15)
                     .border(Color(#colorLiteral(red: 0.3905416727, green: 0.6189041138, blue: 0.8423945904, alpha: 1)), width: 1)
                     .padding()
-                    .navigate(to: SignIn(), when: $sigIn)
                 
                 Text("Design by Sergey Klimovich")
                     .foregroundColor(Color(#colorLiteral(red: 0.3905416727, green: 0.6189041138, blue: 0.8423945904, alpha: 1)))
@@ -183,17 +182,17 @@ struct Profile: View {
                         .font(.system(size: 13))
                         .foregroundColor(.black)
                     VStack {
-                    TextField("Weigth", text: $weight)
-                        .font(.system(size: 13))
-                        .padding(10)
-                        .background(Color.white)
-                        .cornerRadius(15)
-                    
-                    TextField("Heigth", text: $height)
-                        .font(.system(size: 13))
-                        .padding(10)
-                        .background(Color.white)
-                        .cornerRadius(15)
+                        TextField("Weigth", text: $weight)
+                            .font(.system(size: 13))
+                            .padding(10)
+                            .background(Color.white)
+                            .cornerRadius(15)
+                        
+                        TextField("Heigth", text: $height)
+                            .font(.system(size: 13))
+                            .padding(10)
+                            .background(Color.white)
+                            .cornerRadius(15)
                     }.padding(.vertical, 10)
                     
                     Divider()
@@ -216,15 +215,22 @@ struct Profile: View {
                         Divider()
                         
                         Button(action: {
-                            
-                        }) {HStack {
-                            Spacer()
-                            Text("OK")
-                                .foregroundColor(.blue)
-                                .font(.system(size: 17))
-                                .padding(.horizontal)
-                                .padding(.vertical, 10)
-                            Spacer()
+                            UserDefaults.standard.set(self.height, forKey: "height")
+                            UserDefaults.standard.set(self.weight, forKey: "weight")
+                            self.viewModel.editeprofile {
+                                self.weight = UserDefaults.standard.value(forKey: "weight") as? String ?? "--"
+                                self.height = UserDefaults.standard.value(forKey: "height") as? String ?? "--"
+                                self.showAlert.toggle()
+                            }
+                        }) {
+                            HStack {
+                                Spacer()
+                                Text("OK")
+                                    .foregroundColor(.blue)
+                                    .font(.system(size: 17))
+                                    .padding(.horizontal)
+                                    .padding(.vertical, 10)
+                                Spacer()
                             }
                         }
                     }
@@ -236,7 +242,7 @@ struct Profile: View {
                     .background(Color(#colorLiteral(red: 0.9567824006, green: 0.9569160342, blue: 0.9567400813, alpha: 1)))
                     .cornerRadius(20)
             }
-        }
+        }.navigate(to: SignIn(), when: $sigIn)
     }
 }
 
