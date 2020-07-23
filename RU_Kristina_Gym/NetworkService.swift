@@ -188,5 +188,9 @@ class NetworkService: ObservableObject {
         }
     }
     
+    func openWebPage(url: String) {
+        UIApplication.shared.open(URL(string: url)!)
+    }
+    
     
 }

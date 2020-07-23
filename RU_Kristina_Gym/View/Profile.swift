@@ -23,8 +23,7 @@ struct Profile: View {
     @State var showAlert = false
     
     @State var showGenderAlert = false
-    
-    
+        
     var body: some View {
         ZStack {
             VStack {
@@ -130,16 +129,17 @@ struct Profile: View {
                     Divider()
                     HStack {
                         Button(action: {
-                            
+                            self.viewModel.openWebPage(url: "http://dailyworkoutapps.com/privacy-policy.html")
                         }) {
                             Text("Privacy pilicy")
                                 .foregroundColor(Color(#colorLiteral(red: 0.3905416727, green: 0.6189041138, blue: 0.8423945904, alpha: 1)))
                                 .font(.system(size: 17))
                                 .padding(.horizontal)
                                 .padding(.vertical, 10)
-                            
+
                             Spacer()
                         }
+                        
                     }
                     Divider()
                 }
