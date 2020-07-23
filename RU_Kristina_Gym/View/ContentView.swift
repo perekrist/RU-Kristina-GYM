@@ -117,7 +117,7 @@ struct ContentView: View {
             }
         }.navigate(to: Step_2(), when: $nextPage)
         .navigate(to: SignIn(), when: $isNotFirstTime)
-        .navigate(to: MainView(), when: $isLogIned)
+        .navigate(to: Profile(), when: $isLogIned)
     }
     
 }

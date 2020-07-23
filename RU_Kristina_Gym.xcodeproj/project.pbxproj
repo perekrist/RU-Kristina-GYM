@@ -20,9 +20,11 @@
 		CABF3DF624C832680039C72B /* Step_5.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DF524C832680039C72B /* Step_5.swift */; };
 		CABF3DF824C8355E0039C72B /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DF724C8355E0039C72B /* SignIn.swift */; };
 		CABF3DFA24C839E80039C72B /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DF924C839E80039C72B /* SignUp.swift */; };
-		CABF3DFC24C83C010039C72B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DFB24C83C010039C72B /* MainView.swift */; };
+		CABF3DFC24C83C010039C72B /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DFB24C83C010039C72B /* Profile.swift */; };
 		CABF3DFF24C83C8F0039C72B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3DFE24C83C8F0039C72B /* NetworkService.swift */; };
 		CABF3E0124C846890039C72B /* Navigation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3E0024C846890039C72B /* Navigation+Extension.swift */; };
+		CABF3E0524C977690039C72B /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3E0424C977690039C72B /* TabBar.swift */; };
+		CABF3E0724C97AA80039C72B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF3E0624C97AA80039C72B /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,9 +45,11 @@
 		CABF3DF524C832680039C72B /* Step_5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step_5.swift; sourceTree = "<group>"; };
 		CABF3DF724C8355E0039C72B /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		CABF3DF924C839E80039C72B /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
-		CABF3DFB24C83C010039C72B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CABF3DFB24C83C010039C72B /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		CABF3DFE24C83C8F0039C72B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		CABF3E0024C846890039C72B /* Navigation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Navigation+Extension.swift"; sourceTree = "<group>"; };
+		CABF3E0424C977690039C72B /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		CABF3E0624C97AA80039C72B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +124,9 @@
 				CABF3DF524C832680039C72B /* Step_5.swift */,
 				CABF3DF724C8355E0039C72B /* SignIn.swift */,
 				CABF3DF924C839E80039C72B /* SignUp.swift */,
-				CABF3DFB24C83C010039C72B /* MainView.swift */,
+				CABF3DFB24C83C010039C72B /* Profile.swift */,
+				CABF3E0424C977690039C72B /* TabBar.swift */,
+				CABF3E0624C97AA80039C72B /* MainView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -254,13 +260,15 @@
 				CABF3DF424C830D50039C72B /* Step_4.swift in Sources */,
 				CABF3DF624C832680039C72B /* Step_5.swift in Sources */,
 				CABF3DFA24C839E80039C72B /* SignUp.swift in Sources */,
-				CABF3DFC24C83C010039C72B /* MainView.swift in Sources */,
+				CABF3DFC24C83C010039C72B /* Profile.swift in Sources */,
 				CABF3DF024C82A6F0039C72B /* Step_2.swift in Sources */,
 				CABF3DF224C82CD10039C72B /* Step_3.swift in Sources */,
 				CABF3DDC24C821670039C72B /* AppDelegate.swift in Sources */,
 				CABF3DDE24C821670039C72B /* SceneDelegate.swift in Sources */,
 				CABF3DE024C821670039C72B /* ContentView.swift in Sources */,
 				CABF3DF824C8355E0039C72B /* SignIn.swift in Sources */,
+				CABF3E0724C97AA80039C72B /* MainView.swift in Sources */,
+				CABF3E0524C977690039C72B /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
